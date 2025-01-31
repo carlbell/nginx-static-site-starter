@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ./:/workspace:cached  # Ensures VS Code mounts correctly
+      - ./src:/usr/share/nginx/html:rw  # Serve HTML files
+    ports:
+      - "8080:80"
+    working_dir: /workspace  # Ensure the container starts in the correct directory
+

@@ -1,0 +1,16 @@
+{
+    "name": "Nginx Static Site",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "nginx",
+    "workspaceFolder": "/workspace",  // Ensure this exists inside the container
+    "settings": {
+        "editor.formatOnSave": true
+    },
+    "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-docker"
+    ],
+    "remoteUser": "root"  // Ensure VS Code has access
+}
+
